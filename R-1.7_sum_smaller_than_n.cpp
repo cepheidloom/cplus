@@ -1,3 +1,5 @@
+//Write a short C++ function that takes an integer n and returns the sum of all the integers smaller than n.
+
 #include <iostream>
 
 inline int sum_before_n(int n);

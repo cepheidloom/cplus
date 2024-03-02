@@ -1,3 +1,7 @@
+//Write a short C++ function that takes an array of int values and determines 
+//if there is a pair of numbers in the array whose product is even.
+
+
 #include <iostream>
 
 bool arrayProductIsEven(int array[], int n);
