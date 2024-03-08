@@ -29,9 +29,6 @@ int main() {
   cout << p1.getName() << endl;
   cout << p2.getName() << endl;
   cout << p3.getName() << endl;
-
-  Phone* lol= &p1;
-  cout<<*lol<<endl;
 }
 // main ends
 
