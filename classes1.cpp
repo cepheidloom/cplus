@@ -28,9 +28,11 @@ private:
 
 int main() {
   Bike honda(10);
-  honda.setData();
   std::cout << honda.getData() << std::endl;
-  honda.printData();
+  Bike bmw = honda;
+  Bike lola = bmw;
+  std::cout <<bmw.getData() << std::endl;
+  std::cout <<lola.getData() << std::endl;
 }
 
 Bike::Bike() {
