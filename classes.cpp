@@ -1,47 +1,25 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::string; 
+enum Mood { HORNY, HAPPY, CURIOUS, SEARCH };
 
-enum Brand { ANDROID, IOS, KEY_PAD };
-
-class Phone {
+class Manish {
 public:
-  Phone();
-  Phone(const string &nm, const int &prc, const string &osystem,
-        const Brand &brnd);
-  int getPrice() { return 29; }
-  string getName() { return name; }
-  Brand getBrand() { return brand; }
+  Manish(){};
+  Manish(const std::string &state, bool sma);
+  void setMood();
+  static int getAge() { return 23; } //Static member functions can be called without first creating a class instance
 
 private:
-  string name;
-  long price;
-  string os;
-  Brand brand;
+  long pain;
+  short sight;
+  bool misrey;
+  std::string progress;
 };
 
-// main starts
 int main() {
-  Phone p1;
-  Phone p2("Iphone", 25000, "apple OS", IOS);
-  Phone p3 = p2;
-  cout << p1.getName() << endl;
-  cout << p2.getName() << endl;
-  cout << p3.getName() << endl;
-}
-// main ends
-
-Phone::Phone() {
-  name = "Nokia";
-  price = 25000;
-  os = "custom";
-  brand = ANDROID;
-}
-Phone::Phone(const string &nm, const int &prc, const string &osystem,
-             const Brand &brnd) {
-  name = nm;
-  price = prc;
-  os = osystem;
-  brand = brnd;
+  Manish twenty_four;
+  std::cout << twenty_four.getAge() << std::endl;
+  std::cout<<Manish::getAge()<<std::endl;
 }
