@@ -12,11 +12,13 @@ public:
     }
   }
 
+  friend std::ostream &operator<<(std::ostream &out, const Bike &bike);
+
   void setData() {
     int element;
-    for (int i = 0; i< size; i++) {
-      std::cout<<"Enter element "<<i<<std::endl;
-      std::cin>>element;
+    for (int i = 0; i < size; i++) {
+      std::cout << "Enter element " << i << std::endl;
+      std::cin >> element;
       data[i] = element;
     }
   }
@@ -26,13 +28,19 @@ private:
   int size;
 };
 
+std::ostream &operator<<(std::ostream &out, const Bike &bike) {
+  std::cout<<bike.data<<" "<<bike.size;
+  return out;
+} 
+
 int main() {
   Bike honda(10);
   std::cout << honda.getData() << std::endl;
   Bike bmw = honda;
   Bike lola = bmw;
-  std::cout <<bmw.getData() << std::endl;
-  std::cout <<lola.getData() << std::endl;
+  std::cout << honda << std::endl;
+  std::cout << bmw.getData() << std::endl;
+  std::cout << lola.getData() << std::endl;
 }
 
 Bike::Bike() {
